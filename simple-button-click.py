@@ -4,11 +4,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-usernameStr = 'admin@mosv'
-passwordStr = 'k4ssketski'
+usernameStr = '#'
+passwordStr = '#'
 
 browser = webdriver.Chrome()
-browser.get(('http://10.10.14.220/wp-login.php'))
+browser.get(('http://#/wp-login.php'))
 
 username = browser.find_element_by_id('user_login')
 username.send_keys(usernameStr)
