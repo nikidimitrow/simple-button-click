@@ -1,19 +1,24 @@
-import urllib.request
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-def get_unread_msgs(user, passwd):
-    auth_handler = urllib.request.HTTPBasicAuthHandler()
-    auth_handler.add_password(
-        realm='New mail feed',
-        uri='https://mail.google.com',
-        user='%s@gmail.com' % user,
-        passwd=passwd
-    )
-    opener = urllib.request.build_opener(auth_handler)
-    urllib.request.install_opener(opener)
-    feed = urllib.request.urlopen('https://mail.google.com/mail/feed/atom')
-    return feed.read()
+usernameStr = 'YOUR_USERNAME'
+passwordStr = 'YOUR_PASS'
 
-print (get_unread_msgs("",""))
+browser = webdriver.Chrome()
+browser.get(('http://YOUR_WEB_SITE/login.php'))
 
+username = browser.find_element_by_id('user_login')
+username.send_keys(usernameStr)
+nextButton = browser.find_element_by_id('user_pass')
+nextButton.click()
+
+password = WebDriverWait(browser, 10).until(
+    EC.presence_of_element_located((By.ID, 'user_login')))
+password.send_keys(passwordStr)
+
+signInButton = browser.find_element_by_id('user_pass')
+signInButton.click()
 
 
