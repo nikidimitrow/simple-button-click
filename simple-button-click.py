@@ -26,6 +26,4 @@ signInButton.click()
 #Open the page where the button is
 browser.get(('#/admin.php?page=w3tc_general'))
 
-#signInButton = browser.find_elements_by_class_name('w3tc_flush_pgcache')
-#signInButton.click()
 
