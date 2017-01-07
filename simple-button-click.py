@@ -4,11 +4,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-usernameStr = 'admin@mosv'
-passwordStr = 'k4ssketski'
+usernameStr = 'admin@#'
+passwordStr = '#'
 
 browser = webdriver.Chrome()
-browser.get(('http://10.10.14.220/wp-login.php'))
+browser.get(('http://#/login.php'))
 
 username = browser.find_element_by_id('user_login')
 username.send_keys(usernameStr)
@@ -23,5 +23,9 @@ password.send_keys(passwordStr)
 signInButton = browser.find_element_by_id('wp-submit')
 signInButton.click()
 
-signInButton = browser.find_element_by_class_name('page-count')
-signInButton.click()
+#Open the page where the button is
+browser.get(('#/admin.php?page=w3tc_general'))
+
+#signInButton = browser.find_elements_by_class_name('w3tc_flush_pgcache')
+#signInButton.click()
+
