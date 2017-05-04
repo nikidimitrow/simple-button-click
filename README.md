@@ -9,4 +9,6 @@ To-Do:
 
 1. Add comments to expain how program work;
 2. Add Timer;
-3. Another parameter, when new page is open.
+3. Another parameter, when new page is open;
+4. To work with Python 3.5
+
