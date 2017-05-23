@@ -3,11 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+#seet your user name and password
 usernameStr = 'admin@#'
 passwordStr = '#'
 
 browser = webdriver.Chrome()
+#put web adress
 browser.get(('http://#/login.php'))
 
 username = browser.find_element_by_id('user_login')
