@@ -1,4 +1,4 @@
-Simple-button-click scripts need the folowing tools to work:
+Simple button-click scripts. The scropts need the folowing tools to work:
 
 1. Python programming language 2.7.11 or above (dosn't work with python 3);
 2. Google Chrome browser;
