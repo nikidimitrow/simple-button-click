@@ -11,3 +11,5 @@ To-Do:
 2. Add Timer;
 3. Another parameter, when new page is open;
 4.  Reworking to be compatible to work with Python 3
+
+This is just a beta test. Please, don't use it.
